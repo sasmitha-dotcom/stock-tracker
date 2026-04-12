@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-icon>show_chart</mat-icon>
+  <span style="margin-left: 8px;">Stock Tracker</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <mat-nav-list>
+      @for (link of navLinks; track link.path) {
+        <a mat-list-item [routerLink]="link.path" routerLinkActive="active-link">
+          <mat-icon matListItemIcon>{{ link.icon }}</mat-icon>
+          <span matListItemTitle>{{ link.label }}</span>
+        </a>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="main-content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

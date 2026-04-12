@@ -1,0 +1,25 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  h1 { margin: 0; }
+}
+
+.trade-table { width: 100%; }
+
+.badge-buy  { color: #2e7d32; font-weight: 600; }
+.badge-sell { color: #c62828; font-weight: 600; }
+
+.spinner-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  margin-top: 32px;
+}
